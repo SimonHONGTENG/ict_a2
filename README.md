@@ -39,8 +39,8 @@ Channel entity has an id as it primary key, and groupname.
 Database:
 
 
-group:
-	id
+Group:
+	id,
 	name
 
 [
@@ -52,8 +52,8 @@ group:
 
 
 Channel/Chat:
-	id
-	name
+	id,
+	name,
 	group_id
 	
 [
@@ -64,15 +64,16 @@ Channel/Chat:
 ]
 
 
-user:
-	username
-	pasword
-	email
-	channel_list
-	adminChannelList
-	adminGroupList
-	group_admin
-	group_assist
+User:
+id,
+	username,
+	pasword,
+	email,
+	channelList,
+	adminChannelList,
+	adminGroupList,
+	group_admin,
+	group_assist,
 
 
 [
@@ -82,12 +83,12 @@ user:
 ]
 
 
-message:
-	id
-	channel_id
-	username
-	text
-	picture
+Message:
+	id,
+	channel_id,
+	username,
+	text,
+	picture,
 	time
 	
 
