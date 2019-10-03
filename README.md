@@ -36,6 +36,62 @@ Group entity has an id as it primary key, and groupname.
 
 Channel entity has an id as it primary key, and groupname.
 
+Database:
+
+
+group:
+	id
+	name
+
+[
+{"name": "G1"},
+{"name": "G2"},
+{"name": "G3"},
+{"name": "G4" }
+]
+
+
+Channel/Chat:
+	id
+	name
+	group_id
+	
+[
+{"name": "C1", "group_id":"1"},
+{"name": "C2", "group_id":"2"},
+{"name": "C3", "group_id":"3"},
+{"name": "C3", "group_id":"1"}
+]
+
+
+user:
+	username
+	pasword
+	email
+	channel_list
+	adminChannelList
+	adminGroupList
+	group_admin
+	group_assist
+
+
+[
+{"username":"super","password":"super", "email":"super@com.au","channelList":[],"adminChannelList":[], "adminGroupList":["1","2"], "groupAdmin":true, "groupAssist":true},
+{"username":"user1","password":"user1", "email":"user1@com.au","channelList":["1","2"], "adminChannelList":["1","2"],"adminGroupList":["3"],"groupAdmin":true, "groupAssist":false},
+{"username":"user2","password":"user2", "email":"user2@com.au","channelList":["2","3"],"adminChannelList":["3"],"adminGroupList":[], "groupAdmin":false, "groupAssist":true}
+]
+
+
+message:
+	id
+	channel_id
+	username
+	text
+	picture
+	time
+	
+
+
 ## REST API
 ---
 [Users](users.md) <br/>
